@@ -9,3 +9,11 @@ services:
     #   - db
     ports:
       - "8080:80"
+    networks:
+      - frontend
+
+networks:
+  frontend:
+    name: laboratorios
+    driver: bridge
+    attachable: true
