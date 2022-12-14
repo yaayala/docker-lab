@@ -10,10 +10,12 @@ services:
     ports:
       - "8080:80"
     networks:
-      - frontend
+      - laboratorio
 
 networks:
-  frontend:
-    name: laboratorios
-    driver: bridge
-    attachable: true
+    laboratorio:
+        # use the bridge driver, but enable IPv6
+        name: laboratorios
+        driver: bridge
+        driver_opts:
+           attachable: "true"
