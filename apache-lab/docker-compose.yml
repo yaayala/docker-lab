@@ -14,8 +14,7 @@ services:
 
 networks:
     laboratorio:
-        # use the bridge driver, but enable IPv6
-        name: laboratorios
+        # name: laboratorios
         driver: bridge
         driver_opts:
            attachable: "true"
